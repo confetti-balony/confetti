@@ -1,0 +1,69 @@
+{
+  "name": {
+    "name": "name",
+    "label": "Imię",
+    "placeholder": "Imię",
+
+    "validationOptions": {
+      "required": {
+        "value": true,
+        "message": "Pole obowiązkowe do wypełnienia"
+      },
+      "pattern": {
+        "value": "^(?!.*(?:[ -]{2,}| -| - |^[ -]|^-))[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż -]+$",
+        "message": "Nieprawidłowe Іmię"
+      },
+      "maxLength": {
+        "value": 70,
+        "message": "Dopuszczamy nie więcej niż 70 znaków."
+      }
+    }
+  },
+
+  "email": {
+    "name": "email",
+    "label": "E-mail",
+    "placeholder": "mail@gmail.com",
+
+    "validationOptions": {
+      "required": {
+        "value": true,
+        "message": "Pole obowiązkowe do wypełnienia"
+      },
+      "pattern": {
+        "value": "^[a-zA-Z0-9]+([._-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.-][a-zA-Z0-9]+)*\\.[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})?$",
+        "message": "Nieprawidłowy email"
+      },
+      "maxLength": {
+        "value": 63,
+        "message": "Dopuszczamy nie więcej niż 63 znaków."
+      }
+    }
+  },
+
+  "message": {
+    "name": "message",
+    "label": "Wiadomość",
+    "placeholder": "Twoja wiadomość...",
+    "validationOptions": {
+      "maxLength": {
+        "value": 1000,
+        "message": "Dopuszczamy nie więcej niż 1000 znaków."
+      }
+    }
+  },
+  "submitBtn": {
+    "label": "Wyślij",
+    "loadingText": "Wysyłanie"
+  },
+  "submitMessages": {
+    "success": "Formularz został pomyślnie wysłany. Dziękujemy",
+    "error": "Błąd wysyłania formularza. Proszę spróbować ponownie"
+  },
+  "mailerMessage": {
+    "title": "Wiadomość ze strony internetowej CONFETTI od ",
+    "name": "Imię: ",
+    "email": "E-mail: ",
+    "message": "Wiadomość: "
+  }
+}

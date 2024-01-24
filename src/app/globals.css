@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Common */
+.section {
+  @apply pt-14 md:pt-16 xl:pt-[124px];
+}
+
+/* Slider */
+.swiper-pagination {
+  position: static !important;
+  margin-top: 24px;
+  line-height: 0;
+
+  @apply md:mt-0 md:hidden;
+}
+
+.swiper-pagination-bullet {
+  background: #222 !important;
+  opacity: 0.25 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #222 !important;
+  opacity: 1 !important;
+}
+
+/* Gallery Slider */
+.gallery-slider .swiper-slide {
+  @apply flex justify-center;
+}
+
+/* Review Slider */
+.review-slider .swiper-slide {
+  @apply flex justify-center;
+}
+
+/* Lightbox styles */
+.yarl__root {
+  --yarl__color_backdrop: #fff;
+  --yarl__color_button: #ea80b3;
+  --yarl__color_button_active: #eab27f;
+}
+
+/* Navigation menu*/
+.homeNavLink {
+  @apply cursor-pointer text-2xl/normal font-medium -tracking-[0.01em] transition-all hover:text-color-accent-primary focus:text-color-accent-primary md:text-4xl/normal;
+}
+
+.serviceNavLink {
+  @apply font-medium -tracking-[0.01em] transition-all hover:text-color-accent-primary focus:text-color-accent-primary md:text-2xl/normal;
+}
+
+/* Footer line */
+.footerLine::before {
+  content: '';
+  @apply absolute left-0 top-0 h-[1px] w-full bg-color-accent-primary;
+}
+
+/* Not Found*/
+.notFound {
+  background-image: url('~/public/images/hero/hero-bg.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.balloonsUp {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  animation: slide-up 8s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0%);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about-item {
+    flex-basis: calc((100% - 1 * 24px) / 2);
+  }
+
+  .gallery-item {
+    flex-basis: calc((100% - 2 * 26px) / 3);
+  }
+}
